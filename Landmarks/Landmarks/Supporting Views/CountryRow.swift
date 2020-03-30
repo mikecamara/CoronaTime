@@ -32,6 +32,66 @@ struct WorldRow: View {
     }
 }
 
+struct WorldRowSubtitleRecovered: View {
+    var world: World
+    var body: some View {
+        HStack {
+            Text("☺️")
+            Text("Recovered:")
+             Spacer()
+            Text("\(world.recovered)")
+            if (world != nil && world.recovered != 0){
+                returnPercentageRecovered(world: world)
+            }
+        }
+    }
+}
+
+struct WorldRowSubtitleActive: View {
+    var world: World
+    var body: some View {
+        HStack {
+            Text("🤒")
+            Text("Active: ")
+            Spacer()
+            Text("\(world.active)")
+            if (world != nil && world.active != 0){
+                returnPercentageActive(world: world)
+            }
+        }
+    }
+}
+
+struct WorldRowSubtitleDeath: View {
+    var world: World
+    var body: some View {
+        HStack {
+            Text("☠️")
+            Text("Deaths: ")
+             Spacer()
+            Text("\(world.deaths)")
+            if (world != nil && world.deaths != 0){
+                returnPercentageDeath(world: world)
+            }
+        }
+    }
+}
+
+func returnPercentageRecovered(world: World)->Text{
+      var percentage = (world.recovered * 100) / world.cases
+       return Text("\(percentage)%")
+}
+
+func returnPercentageActive(world: World)->Text{
+      var percentage = (world.active * 100) / world.cases
+       return Text("\(percentage)%")
+}
+
+func returnPercentageDeath(world: World)->Text{
+      var percentage = (world.deaths * 100) / world.cases
+       return Text("\(percentage)%")
+}
+
 struct CasesRow: View {
     var country: Country
     var body: some View {
@@ -40,10 +100,8 @@ struct CasesRow: View {
                Text("Cases")
                    .font(.title)
                Spacer()
-
                Text("\(country.cases)")
                    .font(.title)
-               
            }
             Divider()
         }

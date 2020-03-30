@@ -11,6 +11,7 @@ import SwiftUI
 struct CoronaDetail: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var observed = Observer()
+    
 
 
     var body: some View {
@@ -38,7 +39,10 @@ struct CoronaDetail: View {
                 VStack(alignment: .center) {
                     Text("🦠")
                         .font(.system(size: 52))
-                    getWorldCases() 
+                    getWorldCases()
+                    getWorldCasesSubtitleAtive()
+                    getWorldCasesSubtitleRecovered()
+                    getWorldCasesSubtitleDeaths()
                     Divider()
                     VStack(alignment: .center) {
                         Text("Symptoms")
@@ -46,18 +50,8 @@ struct CoronaDetail: View {
                    .font(.largeTitle)
                     }
                     VStack(alignment: .leading) {
-                        Divider()
-                        Text("😷 Cough")
-                        .font(.title)
-                        Divider()
-                        Text("🤒 Fever")
-                        .font(.title)
-                        Divider()
-                        Text("😰 Tiredness")
-                        .font(.title)
-                        Divider()
-                        Text("😨 Difficulty breathing")
-                        .font(.title)
+                        Text("😷 Cough, 🤒 Fever, 😰 Tiredness, 😨 Difficulty breathing")
+                            .font(.subheadline)
                         Divider()
                    }
                     Text("Prevention")
@@ -119,11 +113,19 @@ struct CoronaDetail: View {
         }
     }
     func getWorldCases() -> WorldRow {
-        var worlddata: World? = nil
-        for item in observed.worldDataObserver {
-            print(item)
-            var worlddata: World = World(cases: item.cases, deaths: item.deaths, recovered: item.recovered, updated: item.updated, active:item.active)
-        }
+        var worlddata: World? = observed.worldDataObserver
         return WorldRow(world: worlddata ?? World(cases: 0, deaths: 0, recovered: 0, updated: 0, active:0))
+    }
+     func getWorldCasesSubtitleAtive() -> WorldRowSubtitleActive {
+            var worlddata: World? = observed.worldDataObserver
+            return WorldRowSubtitleActive(world: worlddata ?? World(cases: 0, deaths: 0, recovered: 0, updated: 0, active:0))
+    }
+    func getWorldCasesSubtitleRecovered() -> WorldRowSubtitleRecovered {
+            var worlddata: World? = observed.worldDataObserver
+            return WorldRowSubtitleRecovered(world: worlddata ?? World(cases: 0, deaths: 0, recovered: 0, updated: 0, active:0))
+    }
+    func getWorldCasesSubtitleDeaths() -> WorldRowSubtitleDeath {
+            var worlddata: World? = observed.worldDataObserver
+            return WorldRowSubtitleDeath(world: worlddata ?? World(cases: 0, deaths: 0, recovered: 0, updated: 0, active:0))
     }
 }

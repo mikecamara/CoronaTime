@@ -11,7 +11,7 @@ import Foundation
 class Observer : ObservableObject{
     @Published var countriesDataObserver = [Country]()
     @Published var historidcalDataObserver = [Historical]()
-    @Published var worldDataObserver = [World]()
+    @Published var worldDataObserver:World?
     
     init() {
        loadData()
@@ -211,10 +211,10 @@ class Observer : ObservableObject{
                 if let data = data {
                     if let decodedResponse = try? JSONDecoder().decode(WorldData.self, from: data) {
                         DispatchQueue.main.async {
-                            var wolrddata:[World] = [decodedResponse] as [World]
+                            var wolrddata:World = decodedResponse as World
                             self.worldDataObserver = wolrddata
                            
-                            print([decodedResponse] as [World])
+                            print(decodedResponse as World)
                         }
                         return
                     }
