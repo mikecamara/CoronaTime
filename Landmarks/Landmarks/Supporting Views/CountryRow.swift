@@ -20,6 +20,18 @@ struct CountryRow: View {
     }
 }
 
+struct WorldRow: View {
+    var world: World
+    var body: some View {
+        HStack {
+            Text("🌍")
+            Text("Worldwide")
+            Spacer()
+            Text("\(world.cases)")
+        }
+    }
+}
+
 struct CasesRow: View {
     var country: Country
     var body: some View {

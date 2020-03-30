@@ -11,10 +11,12 @@ import Foundation
 class Observer : ObservableObject{
     @Published var countriesDataObserver = [Country]()
     @Published var historidcalDataObserver = [Historical]()
+    @Published var worldDataObserver = [World]()
     
     init() {
        loadData()
        loadHistorical()
+       loadWorld()
     }
 
     func loadData() {
@@ -199,7 +201,28 @@ class Observer : ObservableObject{
     }
     
     
-    
+     func loadWorld() {
+            guard let url = URL(string: "https://corona.lmao.ninja/all") else {
+                print("Invalid URL")
+                return
+            }
+            let request = URLRequest(url: url)
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let data = data {
+                    if let decodedResponse = try? JSONDecoder().decode(WorldData.self, from: data) {
+                        DispatchQueue.main.async {
+                            var wolrddata:[World] = [decodedResponse] as [World]
+                            self.worldDataObserver = wolrddata
+                           
+                            print([decodedResponse] as [World])
+                        }
+                        return
+                    }
+                }
+                print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
+            }.resume()
+        }
+        
     
         
 }

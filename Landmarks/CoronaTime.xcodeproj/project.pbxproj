@@ -29,6 +29,7 @@
 		15000B6D24316ED6009BA295 /* CountryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15000B6824316ED6009BA295 /* CountryDetail.swift */; };
 		15000B6E24316ED6009BA295 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15000B6924316ED6009BA295 /* LandmarkDetail.swift */; };
 		15000B7124316F3C009BA295 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 15000B7024316F3C009BA295 /* SwiftUICharts */; };
+		152512FF243212DF009E4963 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152512FE243212DF009E4963 /* World.swift */; };
 		B7394866229F194000C47603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7394865229F194000C47603 /* AppDelegate.swift */; };
 		B739486C229F194200C47603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B739486B229F194200C47603 /* Assets.xcassets */; };
 		B739486F229F194200C47603 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B739486E229F194200C47603 /* Preview Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		15000B6724316ED6009BA295 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		15000B6824316ED6009BA295 /* CountryDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDetail.swift; sourceTree = "<group>"; };
 		15000B6924316ED6009BA295 /* LandmarkDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		152512FE243212DF009E4963 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		32C0591524A7452A1B7C1DE3 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		B7394862229F194000C47603 /* Crona Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crona Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7394865229F194000C47603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				15000B4824316E28009BA295 /* File.swift */,
 				15000B4424316E28009BA295 /* Historical.swift */,
 				15000B4924316E28009BA295 /* Landmark.swift */,
+				152512FE243212DF009E4963 /* World.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				15000B4F24316E28009BA295 /* Country.swift in Sources */,
 				15000B6D24316ED6009BA295 /* CountryDetail.swift in Sources */,
 				15000B5A24316E5D009BA295 /* LandmarkList.swift in Sources */,
+				152512FF243212DF009E4963 /* World.swift in Sources */,
 				15000B5C24316E5D009BA295 /* CountryRow.swift in Sources */,
 				15000B4E24316E28009BA295 /* Case.swift in Sources */,
 				15000B4D24316E28009BA295 /* Historical.swift in Sources */,

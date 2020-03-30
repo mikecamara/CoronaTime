@@ -10,6 +10,8 @@ import SwiftUI
 
 struct CoronaDetail: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @ObservedObject var observed = Observer()
+
 
     var body: some View {
         ScrollView {
@@ -36,6 +38,7 @@ struct CoronaDetail: View {
                 VStack(alignment: .center) {
                     Text("🦠")
                         .font(.system(size: 52))
+                    getWorldCases() 
                     Divider()
                     VStack(alignment: .center) {
                         Text("Symptoms")
@@ -114,5 +117,13 @@ struct CoronaDetail: View {
                  .padding()
             }
         }
+    }
+    func getWorldCases() -> WorldRow {
+        var worlddata: World? = nil
+        for item in observed.worldDataObserver {
+            print(item)
+            var worlddata: World = World(cases: item.cases, deaths: item.deaths, recovered: item.recovered, updated: item.updated, active:item.active)
+        }
+        return WorldRow(world: worlddata ?? World(cases: 0, deaths: 0, recovered: 0, updated: 0, active:0))
     }
 }

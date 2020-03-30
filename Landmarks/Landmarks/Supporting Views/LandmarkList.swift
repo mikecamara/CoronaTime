@@ -143,6 +143,81 @@ struct LandmarkList: View {
         }
     }
 }
+//        var arrayOfCasesPerDay: [Double] = []
+//        var arrayOfCases:  [[String: Int?]] = [[:]]
+//        var readyArray: [Date: Int?] = [:]
+//        var firstDate = ""
+//        var lastDate = ""
+//        var symbol = ""
+//         var dates = ""
+
+   
+//        if (arrayOfCases.count > 1){
+//            let casesSorted = arrayOfCases.reduce([String : Int]()) { acc, d in
+//              var dx = acc
+//              for entry in d {
+//                let key = entry.key
+//                guard dx[key] == nil else {
+//                    dx[key]! += entry.value ?? 0
+//                  continue
+//                }
+//                dx[entry.key] = entry.value
+//              }
+//              return dx
+//            }
+//
+//            var convertedArray: [Date: Int] = [:]
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "MM/dd/yy"// yyyy-MM-dd"
+//            for dat in casesSorted {
+//                let date = dateFormatter.date(from: dat.key)
+//                if let date = date {
+//                    convertedArray[date] = dat.value
+//                }
+//            }
+//            let ready = convertedArray.sorted(by: { $0.key.compare($1.key) == .orderedAscending })
+//            for caseSorted in ready {
+//                arrayOfCasesPerDay.append(Double(caseSorted.value))
+//            }
+//
+//            let formatter = DateFormatter()
+//            formatter.dateFormat = "MM/dd/yy"
+//
+//            let myfirstDate = formatter.string(from: ready[0].key) // string purpose I add here
+//            let yourDate = formatter.date(from: myfirstDate)
+//            formatter.dateFormat = "dd MMM yyyy"
+//            let myStringafd = formatter.string(from: yourDate!)
+//            firstDate = myStringafd
+//
+//            var totalCount = ready.count - 1
+//            let myLastDate = formatter.string(from: ready[totalCount].key) // string purpose I add here
+//            let yourDatemyLastDate = formatter.date(from: myLastDate)
+//            formatter.dateFormat = "dd MMM yyyy"
+//            let mymyLastDatefd = formatter.string(from: yourDatemyLastDate!)
+//            lastDate = mymyLastDatefd
+//
+//            var lastItem = arrayOfCasesPerDay.count - 1
+//                 var secondLastItem = arrayOfCasesPerDay.count - 2
+//                 var percentage = (arrayOfCasesPerDay[lastItem] * 100) / arrayOfCasesPerDay[secondLastItem]
+//                 percentage = percentage - 100
+//                 if (percentage > 0 ){
+//                     symbol = "🔼" + " " + "\(String(format: "%.1f", percentage))%"
+//                 } else if (percentage < 0 ) {
+//                      symbol = "🔽" + " " + "\(String(format: "%.1f", percentage))%"
+//                 } else {
+//                     symbol = " - 0 new cases since yesterday"
+//                 }
+//
+//
+//
+//                 dates = firstDate + " to " + lastDate
+//
+//        }
+//
+//
+//        return LineView(data: arrayOfCasesPerDay, title: "\(self.country.todayCases)", legend:"Cases Today " + symbol + "\n" + dates)
+//    }
+//}
 
 extension UIApplication {
     func endEditing() {
