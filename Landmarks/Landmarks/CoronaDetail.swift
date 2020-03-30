@@ -16,7 +16,7 @@ struct CoronaDetail: View {
             VStack {
                 VStack(alignment:.trailing){
                     HStack{
-                        Text("Coronavirus Disease").font(.largeTitle)
+                        Text("Virus Disease").font(.largeTitle)
                         Spacer()
                         Button(action: {
                            print("Button action")
@@ -36,11 +36,6 @@ struct CoronaDetail: View {
                 VStack(alignment: .center) {
                     Text("🦠")
                         .font(.system(size: 52))
-                    HStack(alignment: .top) {
-                        Text("COVID-19 Alert")
-                            .font(.subheadline)
-                            .font(.subheadline)
-                    }
                     Divider()
                     VStack(alignment: .center) {
                         Text("Symptoms")

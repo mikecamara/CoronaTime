@@ -75,8 +75,7 @@ struct CountryDetail: View {
           HStack {
               Button(
                   action: {
-                     print("TEst")
-                    let text = flag(country: self.country.countryInfo.iso2 ?? "") + " " + self.country.country + " - Coronavirus Covid-19" +
+                    let text = flag(country: self.country.countryInfo.iso2 ?? "") + " " + self.country.country + " - Virus" +
                         "\n Cases: " + "\(self.country.cases)" + "\n" +
                         "Deaths: " + "\(self.country.deaths)" + "\n" +
                         "Active: " + "\(self.country.active)" + "\n" +
