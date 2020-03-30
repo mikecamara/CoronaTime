@@ -11,7 +11,7 @@ import Foundation
 public class Historical: Codable, Identifiable {
     public let country: String?
     public let province: String?
-    public let timeline: Timeline
+    public let timeline: Timeline?
    
     enum CodingKeys: String, CodingKey {
         case country = "country"
@@ -19,9 +19,7 @@ public class Historical: Codable, Identifiable {
         case timeline = "timeline"
     }
 
-    public init(country: String, province: String
-        , timeline: Timeline
-    ) {
+    public init(country: String, province: String, timeline: Timeline) {
         self.country = country
         self.province = province
         self.timeline = timeline

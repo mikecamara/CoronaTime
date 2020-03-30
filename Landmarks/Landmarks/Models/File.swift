@@ -186,7 +186,7 @@ class Observer : ObservableObject{
                         var historicals: [Historical] = decodedResponse as [Historical]
                         self.historidcalDataObserver = historicals
                         for h in historicals {
-                           // print(h.country)
+                            print(h.country)
 //                            print(h.timeline?.cases)
                         }
                         print(decodedResponse as [Historical])

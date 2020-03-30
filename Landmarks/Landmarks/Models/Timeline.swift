@@ -10,8 +10,8 @@ import Foundation
 
 public class Timeline: Codable, Identifiable {
 
-    public let cases:  [String: Int]
-    public let deaths:  [String: Int]
+    public let cases: [String: Int?]?
+    public let deaths: [String: Int?]?
    
 
     enum CodingKeys: String, CodingKey {
