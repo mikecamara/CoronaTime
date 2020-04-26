@@ -114,18 +114,19 @@ struct CoronaDetail: View {
     }
     func getWorldCases() -> WorldRow {
         var worlddata: World? = observed.worldDataObserver
-        return WorldRow(world: worlddata ?? World(cases: 0, deaths: 0, recovered: 0, updated: 0, active:0))
+        return WorldRow(world: worlddata ?? World(updated: 0, cases: 0, todayCases: 0, deaths: 0, todayDeaths: 0, recovered: 0, active: 0, critical: 0, casesPerOneMillion: 0, deathsPerOneMillion: 0, tests: 0, testsPerOneMillion: 0.0, affectedCountries: 0 ))
     }
+    
      func getWorldCasesSubtitleAtive() -> WorldRowSubtitleActive {
             var worlddata: World? = observed.worldDataObserver
-            return WorldRowSubtitleActive(world: worlddata ?? World(cases: 0, deaths: 0, recovered: 0, updated: 0, active:0))
+            return WorldRowSubtitleActive(world: worlddata ?? World(updated: 0, cases: 0, todayCases: 0, deaths: 0, todayDeaths: 0, recovered: 0, active: 0, critical: 0, casesPerOneMillion: 0, deathsPerOneMillion: 0, tests: 0, testsPerOneMillion: 0.0, affectedCountries: 0 ) )
     }
     func getWorldCasesSubtitleRecovered() -> WorldRowSubtitleRecovered {
             var worlddata: World? = observed.worldDataObserver
-            return WorldRowSubtitleRecovered(world: worlddata ?? World(cases: 0, deaths: 0, recovered: 0, updated: 0, active:0))
+        return WorldRowSubtitleRecovered(world: worlddata ?? World(updated: 0, cases: 0, todayCases: 0, deaths: 0, todayDeaths: 0, recovered: 0, active: 0, critical: 0, casesPerOneMillion: 0, deathsPerOneMillion: 0, tests: 0, testsPerOneMillion: 0.0, affectedCountries: 0 ))
     }
     func getWorldCasesSubtitleDeaths() -> WorldRowSubtitleDeath {
             var worlddata: World? = observed.worldDataObserver
-            return WorldRowSubtitleDeath(world: worlddata ?? World(cases: 0, deaths: 0, recovered: 0, updated: 0, active:0))
+            return WorldRowSubtitleDeath(world: worlddata ?? World(updated: 0, cases: 0, todayCases: 0, deaths: 0, todayDeaths: 0, recovered: 0, active: 0, critical: 0, casesPerOneMillion: 0, deathsPerOneMillion: 0, tests: 0, testsPerOneMillion: 0.0, affectedCountries: 0 ))
     }
 }

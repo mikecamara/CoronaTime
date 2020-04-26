@@ -20,7 +20,7 @@ class Observer : ObservableObject{
     }
 
     func loadData() {
-        guard let url = URL(string: "https://corona.lmao.ninja/countries?sort=cases") else {
+        guard let url = URL(string: "https://corona.lmao.ninja/v2/countries?sort=cases") else {
             print("Invalid URL")
             return
         }
@@ -43,7 +43,7 @@ class Observer : ObservableObject{
     }
     
     func loadDeath() {
-               guard let url = URL(string: "https://corona.lmao.ninja/countries?sort=deaths") else {
+               guard let url = URL(string: "https://corona.lmao.ninja/v2/countries?sort=deaths") else {
                    print("Invalid URL")
                    return
                }
@@ -66,7 +66,7 @@ class Observer : ObservableObject{
            }
     
     func loadActive() {
-        guard let url = URL(string: "https://corona.lmao.ninja/countries?sort=active") else {
+        guard let url = URL(string: "https://corona.lmao.ninja/v2/countries?sort=active") else {
             print("Invalid URL")
             return
         }
@@ -88,7 +88,7 @@ class Observer : ObservableObject{
     }
     
     func loadCritical() {
-        guard let url = URL(string: "https://corona.lmao.ninja/countries?sort=critical") else {
+        guard let url = URL(string: "https://corona.lmao.ninja/v2/countries?sort=critical") else {
             print("Invalid URL")
             return
         }
@@ -110,7 +110,7 @@ class Observer : ObservableObject{
     }
     
     func loadRecovered() {
-        guard let url = URL(string: "https://corona.lmao.ninja/countries?sort=recovered") else {
+        guard let url = URL(string: "https://corona.lmao.ninja/v2/countries?sort=recovered") else {
             print("Invalid URL")
             return
         }
@@ -132,7 +132,7 @@ class Observer : ObservableObject{
     }
     
     func loadTodaysCases() {
-        guard let url = URL(string: "https://corona.lmao.ninja/countries?sort=todaysCases") else {
+        guard let url = URL(string: "https://corona.lmao.ninja/v2/countries?sort=todaysCases") else {
             print("Invalid URL")
             return
         }
@@ -154,7 +154,7 @@ class Observer : ObservableObject{
     }
     
     func loadToadaysDeaths() {
-        guard let url = URL(string: "https://corona.lmao.ninja/countries?sort=todaysDeaths") else {
+        guard let url = URL(string: "https://corona.lmao.ninja/v2/countries?sort=todaysDeaths") else {
             print("Invalid URL")
             return
         }
@@ -202,7 +202,7 @@ class Observer : ObservableObject{
     
     
      func loadWorld() {
-            guard let url = URL(string: "https://corona.lmao.ninja/all") else {
+            guard let url = URL(string: "https://corona.lmao.ninja/v2/all") else {
                 print("Invalid URL")
                 return
             }
