@@ -1,6 +1,6 @@
 # COVID-19 Tracker APP
 
-This project was built using the new SWIFT UI and display the COVID-19 infections live data from the [Novel COVD API](https://github.com/NovelCOVID/API).
+This project was built using the new SWIFT UI and display the COVID-19 infections live data from the [Novel COVID API](https://github.com/NovelCOVID/API).
 
 ![Alt text](screenshots/1.png?raw=true "Corona World Cases")
 
